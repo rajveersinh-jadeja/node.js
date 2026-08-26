@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Customize | Ducati</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+<body>
+
+  <header class="navbar">
+
+    <a href="/" class="logo">
+      DUCATI
+    </a>
+
+    <nav>
+      <a href="/">Home</a>
+
+      <a href="/discover">
+        Discover
+      </a>
+
+      <a href="/test-drive">
+        Test Ride
+      </a>
+
+      <a href="/customize" class="active">
+        Customize
+      </a>
+    </nav>
+
+    <a href="/test-drive" class="nav-btn">
+      Test Ride
+    </a>
+
+  </header>
+
+
+
+
+  <section
+    class="customize-page"
+    style="
+      background-image:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.96),
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.20)
+      ),
+      url('https://cdn-s3.autocarindia.com/Ducati/panigale-v4/Panigale%20V4_1.jpg');
+    "
+  >
+
+    <div class="customize-text">
+
+      <p class="section-label">
+        MAKE IT YOURS
+      </p>
+
+      <h1>
+        BUILD YOUR<br>
+        <span>DUCATI</span>
+      </h1>
+
+      <p class="customize-description">
+        Choose your motorcycle, select your preferred finish
+        and create a Ducati that feels uniquely yours.
+      </p>
+
+
+      <form id="customizeForm">
+
+        <div class="customize-field">
+
+          <label for="bike">
+            Motorcycle
+          </label>
+
+          <select id="bike" name="bike" required>
+
+            <option value="">
+              Select Motorcycle
+            </option>
+
+            <% bikes.forEach(bike => { %>
+
+              <option
+                value="<%= bike.name %>"
+                data-image="<%= bike.image %>"
+              >
+                <%= bike.name %>
+              </option>
+
+            <% }) %>
+
+          </select>
+
+        </div>
+
+
+        <div class="customize-field">
+
+          <label for="finish">
+            Finish
+          </label>
+
+          <select id="finish" name="finish">
+
+            <option value="Classic Red">
+              Classic Red
+            </option>
+
+            <option value="Black">
+              Stealth Black
+            </option>
+
+            <option value="White">
+              Arctic White
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="customize-field">
+
+          <label for="seat">
+            Seat
+          </label>
+
+          <select id="seat" name="seat">
+
+            <option value="Standard">
+              Standard
+            </option>
+
+            <option value="Sport">
+              Sport
+            </option>
+
+            <option value="Racing">
+              Racing
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="btn customize-btn"
+          onclick="buildDucati()"
+        >
+          Build Your Ducati
+          <span>→</span>
+        </button>
+
+      </form>
+
+
+      <div
+        id="buildResult"
+        class="build-result"
+      >
+
+        <span>YOUR CONFIGURATION</span>
+
+        <h3 id="resultBike">
+          Ducati
+        </h3>
+
+        <p id="resultDetails">
+          Choose your options above.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        DUCATI
+      </div>
+
+      <div class="footer-links">
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/discover">
+          Discover
+        </a>
+
+        <a href="/test-drive">
+          Test Ride
+        </a>
+
+        <a href="/customize">
+          Customize
+        </a>
+
+      </div>
+
+      <p>
+        © 2026 Ducati. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    function buildDucati() {
+
+      const bike =
+        document.getElementById("bike");
+
+      const finish =
+        document.getElementById("finish").value;
+
+      const seat =
+        document.getElementById("seat").value;
+
+      const selected =
+        bike.options[bike.selectedIndex];
+
+
+      if (!bike.value) {
+
+        alert("Please select a motorcycle.");
+
+        return;
+
+      }
+
+
+      document.getElementById("resultBike").textContent =
+        bike.value;
+
+
+      document.getElementById("resultDetails").textContent =
+        finish + " • " + seat;
+
+
+      document.getElementById("buildResult").classList.add("show");
+
+    }
+
+  </script>
+
+</body>
+
+</html>

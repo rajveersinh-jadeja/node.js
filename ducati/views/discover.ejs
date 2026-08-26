@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Discover | Ducati</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+<body>
+
+  <header class="navbar">
+
+    <a href="/" class="logo">
+      DUCATI
+    </a>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/discover" class="active">Discover</a>
+      <a href="/test-drive">Test Ride</a>
+      <a href="/customize">Customize</a>
+    </nav>
+
+    <a href="/test-drive" class="nav-btn">
+      Test Ride
+    </a>
+
+  </header>
+
+
+
+  <section
+    class="page-header"
+    style="
+      background-image:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.94),
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.20)
+      ),
+      url('https://cdn-s3.autocarindia.com/Ducati/panigale-v4/Panigale%20V4_1.jpg');
+    "
+  >
+
+    <div class="page-header-content">
+
+      <p>EXPLORE THE RANGE</p>
+
+      <h1>
+        FIND YOUR<br>
+        <span>DUCATI</span>
+      </h1>
+
+      <p class="header-description">
+        Discover the complete Ducati motorcycle range.
+        Choose the machine that matches your passion,
+        performance and riding style.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <section class="discover-list">
+
+    <div class="discover-heading">
+
+      <div>
+        <p class="section-label">
+          DUCATI COLLECTION
+        </p>
+
+        <h2>
+          OUR<br>
+          <span>MOTORCYCLES</span>
+        </h2>
+      </div>
+
+      <p>
+        From track-focused superbikes to adventure
+        machines and iconic road motorcycles.
+      </p>
+
+    </div>
+
+
+
+    <div class="discover-grid">
+
+      <% bikes.forEach((bike, index) => { %>
+
+        <article class="discover-card">
+
+          <div class="discover-image">
+
+            <img
+              src="<%= bike.image %>"
+              alt="<%= bike.name %>"
+              loading="lazy"
+            >
+
+            <span class="discover-number">
+              <%= String(index + 1).padStart(2, "0") %>
+            </span>
+
+          </div>
+
+
+
+          <div class="discover-info">
+
+            <p class="bike-category">
+              DUCATI MOTORCYCLE
+            </p>
+
+            <h2>
+              <%= bike.name %>
+            </h2>
+
+            <p class="discover-details">
+              <%= bike.details %>
+            </p>
+
+
+            <div class="discover-bottom">
+
+              <div class="discover-price">
+
+                <span>PRICE</span>
+
+                <strong>
+                  <%= bike.price %>
+                </strong>
+
+              </div>
+
+
+              <a
+                href="/customize"
+                class="discover-btn"
+              >
+                Customize
+                <span>→</span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      <% }) %>
+
+    </div>
+
+  </section>
+
+
+
+  <section
+    class="discover-cta"
+    style="
+      background-image:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.95),
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.20)
+      ),
+      url('https://cdn-s3.autocarindia.com/Ducati/DesertX/ES3_2843.JPG');
+    "
+  >
+
+    <div>
+
+      <p class="section-label">
+        YOUR NEXT RIDE
+      </p>
+
+      <h2>
+        READY TO<br>
+        <span>RIDE?</span>
+      </h2>
+
+      <p>
+        Experience Ducati performance and discover
+        the motorcycle built for you.
+      </p>
+
+      <a href="/test-drive" class="btn">
+        Book Test Ride
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        DUCATI
+      </div>
+
+      <div class="footer-links">
+
+        <a href="/">Home</a>
+
+        <a href="/discover">
+          Discover
+        </a>
+
+        <a href="/test-drive">
+          Test Ride
+        </a>
+
+        <a href="/customize">
+          Customize
+        </a>
+
+      </div>
+
+      <p>
+        © 2026 Ducati. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
