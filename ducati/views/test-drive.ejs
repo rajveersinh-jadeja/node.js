@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Test Ride | Ducati</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+<body>
+
+  <header class="navbar">
+
+    <a href="/" class="logo">
+      DUCATI
+    </a>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/discover">Discover</a>
+      <a href="/test-drive" class="active">Test Ride</a>
+      <a href="/customize">Customize</a>
+    </nav>
+
+    <a href="/discover" class="nav-btn">
+      Explore Bikes
+    </a>
+
+  </header>
+
+
+
+  <section
+    class="form-page"
+    style="
+      background-image:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.95),
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.20)
+      ),
+      url('https://cdn-s3.autocarindia.com/Ducati/panigale-v4/Panigale%20V4_1.jpg');
+    "
+  >
+
+    <div class="form-content">
+
+      <p class="section-label">
+        DUCATI EXPERIENCE
+      </p>
+
+      <h1>
+        BOOK YOUR<br>
+        <span>TEST RIDE</span>
+      </h1>
+
+      <p class="form-description">
+        Feel the power, precision and character of a Ducati.
+        Choose your motorcycle and request your test ride.
+      </p>
+
+
+      <form action="/test-drive" method="POST">
+
+        <div class="form-row">
+
+          <div class="input-group">
+
+            <label for="name">
+              Full Name
+            </label>
+
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+            >
+
+          </div>
+
+
+          <div class="input-group">
+
+            <label for="phone">
+              Phone Number
+            </label>
+
+            <input
+              id="phone"
+              type="tel"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+        <div class="input-group">
+
+          <label for="email">
+            Email Address
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          >
+
+        </div>
+
+
+        <div class="input-group">
+
+          <label for="bike">
+            Select Motorcycle
+          </label>
+
+          <select
+            id="bike"
+            name="bike"
+            required
+          >
+
+            <option value="">
+              Select your Ducati
+            </option>
+
+            <% bikes.forEach(bike => { %>
+
+              <option value="<%= bike.name %>">
+                <%= bike.name %>
+              </option>
+
+            <% }) %>
+
+          </select>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn form-submit"
+        >
+          Request Test Ride
+          <span>→</span>
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        DUCATI
+      </div>
+
+      <div class="footer-links">
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/discover">
+          Discover
+        </a>
+
+        <a href="/test-drive">
+          Test Ride
+        </a>
+
+        <a href="/customize">
+          Customize
+        </a>
+
+      </div>
+
+      <p>
+        © 2026 Ducati. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
