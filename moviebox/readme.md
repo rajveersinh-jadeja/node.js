@@ -69,4 +69,4 @@ moviebox/
 
 ## Author
 
-Rajveer Sinh Jadeja
+RajveerSinh Jadeja
