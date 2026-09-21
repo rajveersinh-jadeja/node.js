@@ -37,9 +37,6 @@ app.get("/create", async (req, res) => {
 
 
 
-// this is comment
-
-
 app.get("/read/:book", async (req, res) => {
     const bookdata = await Book.findOne({
         book: req.params.book
