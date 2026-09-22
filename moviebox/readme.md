@@ -2,6 +2,9 @@
 
 MovieBox is a simple movie management web application built with Node.js, Express, MongoDB, and EJS.
 
+##video explanation 
+https://drive.google.com/file/d/1dzvIthle4-VSqKqeimr4P0JlAguNY8sl/view?usp=drivesdk
+
 ## Features
 
 * View movies
