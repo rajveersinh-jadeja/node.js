@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06fbf39b-f946-4b93-a6df-d0600297eca2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/blogcontroller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="06fbf39b-f946-4b93-a6df-d0600297eca2" name="Changes" comment="mvc arcitacure" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,23 +38,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000002052662822" />
-      <entry key="S2" value="1.0212852817912577" />
-      <entry key="S5" value="1.2144035859695699" />
-      <entry key="S10" value="1.463411087009773" />
-      <entry key="S30" value="1.8456807300038176" />
-      <entry key="S60" value="2.14817360695588" />
-      <entry key="M2" value="2.487174095396494" />
-      <entry key="M5" value="4.181080616030985" />
-      <entry key="M10" value="9.29790497131899" />
-      <entry key="M15" value="13.702350179151656" />
-      <entry key="M30" value="21.191837293332703" />
-      <entry key="H1" value="26.738401138029758" />
-      <entry key="H2" value="30.124542964383814" />
-      <entry key="H4" value="31.99685035589352" />
-      <entry key="D1" value="33.65666976978965" />
-      <entry key="W1" value="33.95071565544" />
+      <entry key="MS100" value="1.0000048620629398" />
+      <entry key="MS500" value="1.0865693417569329" />
+      <entry key="S2" value="1.542426678369659" />
+      <entry key="S5" value="1.7840636962359144" />
+      <entry key="S10" value="1.9317156917010934" />
+      <entry key="S30" value="2.583852448242429" />
+      <entry key="S60" value="3.381455444328914" />
+      <entry key="M2" value="4.439671859605175" />
+      <entry key="M5" value="6.637360886525238" />
+      <entry key="M10" value="11.09583220340518" />
+      <entry key="M15" value="15.406398096930468" />
+      <entry key="M30" value="23.688066835871393" />
+      <entry key="H1" value="30.457606559645477" />
+      <entry key="H2" value="34.81805252536203" />
+      <entry key="H4" value="37.297004670258325" />
+      <entry key="D1" value="39.533079811453774" />
+      <entry key="W1" value="39.93288321750895" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -82,23 +76,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="5.924255256303101E-19" />
-      <entry key="MS500" value="2.2623871640693518E-4" />
-      <entry key="S2" value="0.13466753352992172" />
-      <entry key="S5" value="0.6026059030610049" />
-      <entry key="S10" value="1.0706331404578944" />
-      <entry key="S30" value="1.681702472301362" />
-      <entry key="S60" value="2.0554461141893716" />
-      <entry key="M2" value="2.4353916145300243" />
-      <entry key="M5" value="4.155955399498321" />
-      <entry key="M10" value="9.280914592255911" />
-      <entry key="M15" value="13.688642366539586" />
-      <entry key="M30" value="21.183004581670595" />
-      <entry key="H1" value="26.733260968538755" />
-      <entry key="H2" value="30.12175306444188" />
-      <entry key="H4" value="31.995394775953237" />
-      <entry key="D1" value="33.656418227108944" />
-      <entry key="W1" value="33.950679494524096" />
+      <entry key="MS100" value="0.9659409929273697" />
+      <entry key="MS500" value="1.0789447600263873" />
+      <entry key="S2" value="1.5395685383445745" />
+      <entry key="S5" value="1.7827192011957247" />
+      <entry key="S10" value="1.9309762280742482" />
+      <entry key="S30" value="2.5787393969207413" />
+      <entry key="S60" value="3.36614660469269" />
+      <entry key="M2" value="4.417534121517836" />
+      <entry key="M5" value="6.615840233221204" />
+      <entry key="M10" value="11.07815091255976" />
+      <entry key="M15" value="15.391339471113572" />
+      <entry key="M30" value="23.67779303711056" />
+      <entry key="H1" value="30.45142824344665" />
+      <entry key="H2" value="34.8146381628277" />
+      <entry key="H4" value="37.29520633013847" />
+      <entry key="D1" value="39.53276649396931" />
+      <entry key="W1" value="39.9328381120743" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -144,11 +138,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1790239624338</updated>
-      <workItem from="1790239625982" duration="1840000" />
+      <workItem from="1790239625982" duration="2143000" />
     </task>
+    <task id="LOCAL-00001" summary="routes">
+      <option name="closed" value="true" />
+      <created>1790241754397</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1790241754397</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mvc arcitacure">
+      <option name="closed" value="true" />
+      <created>1790241803045</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1790241803045</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;blog-project/package-lock.json&#10;#&#9;moviebox/readme.md" />
+    <MESSAGE value="routes" />
+    <MESSAGE value="mvc arcitacure" />
+    <option name="LAST_COMMIT_MESSAGE" value="mvc arcitacure" />
   </component>
 </project>
