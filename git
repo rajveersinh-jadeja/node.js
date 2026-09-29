@@ -1,1 +1,1 @@
-inhnode.jsblog-project-2 log --format\=-h\ \|\ -an\ \|\ -ae --all
+inhnode.js branch --show-current
