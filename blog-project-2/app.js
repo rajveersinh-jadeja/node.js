@@ -23,3 +23,7 @@ passport.use(new localstrategy(
         if (username === "admin" && password  === "password") {}
     }
 ))
+
+app.get("/", (req, res) => {
+    res.render("index");
+})
