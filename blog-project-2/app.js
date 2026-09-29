@@ -1,13 +1,12 @@
 const express = require('express');
 const session = require("express-session");
 const passport = require("passport");
-const {static} = require("express");
 const localstrategy = require("passport-local").strategy;
 
 const app = express();
 
 app.set("view engine", "ejs");
-app.use(static("public"));
+app.use(express.static("public"));
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -23,7 +22,11 @@ app.use(passport.session);
 
 passport.use(new localstrategy(
     (username,password,done) => {
-        if (username === "admin" && password  === "password") {}
+        if (username === "admin" && password  === "password") {
+
+        }else{
+
+        }
     }
 ))
 
@@ -33,6 +36,8 @@ app.get("/", (req, res) => {
 app.get("/login", (req, res) => {
     res.render("login");
 })
+app.post("/login", (req, res) => {})
+
 
 app.listen(3000, () => {
     console.log("Server is running on http://localhost:3000");
