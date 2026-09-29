@@ -1,6 +1,7 @@
 # Blog Project
 
 A simple blog application built with Node.js and Express.js.
+## Video Expansion 
 
 ## Features
 
