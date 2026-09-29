@@ -37,6 +37,7 @@ app.get("/login", (req, res) => {
     res.render("login");
 })
 app.post("/login", (req, res) => {})
+app.post("/logout", (req, res) => {})
 
 
 app.listen(3000, () => {
