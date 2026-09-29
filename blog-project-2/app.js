@@ -17,3 +17,9 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session);
+
+passport.use(new localstrategy(
+    (username,password,done) => {
+        if (username === "admin" && password  === "password") {}
+    }
+))
