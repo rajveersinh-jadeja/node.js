@@ -2,6 +2,9 @@
 
 A simple blog application built with Node.js and Express.js.
 
+## Video Expansion 
+https://drive.google.com/file/d/1Nm03sSjAs1EtA-HlSPEj0UdlO2JwxY5Z/view?usp=drivesdk
+
 ## Features
 
 - User authentication
