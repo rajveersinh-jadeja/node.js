@@ -9,71 +9,68 @@
 
 <body>
 
-  <nav>
-    <h2>DevBlog</h2>
+<nav>
+  <h2>DevBlog</h2>
 
-    <div>
-      <% if (user) { %>
-        <span>Hi, <%= user %></span>
-        <a href="/logout">Logout</a>
-      <% } else { %>
-        <a href="/login">Login</a>
-      <% } %>
-    </div>
-  </nav>
+  <div>
+    <form action="/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+</nav>
 
-  <main>
+<main>
 
-    <section class="hero">
-      <p class="tag">TECH • DEVELOPMENT • BUILDING</p>
+  <section class="hero">
+    <p class="tag">TECH • DEVELOPMENT • BUILDING</p>
 
-      <h1>
-        Thoughts on building
-        <br />
-        software.
-      </h1>
+    <h1>
+      Thoughts on building
+      <br />
+      software.
+    </h1>
 
+    <p>
+      A simple developer blog about programming,
+      systems, projects and things worth building.
+    </p>
+  </section>
+
+  <section class="posts">
+
+    <article>
+      <span>JAVASCRIPT</span>
+      <h2>Understanding JavaScript Closures</h2>
       <p>
-        A simple developer blog about programming,
-        systems, projects and things worth building.
+        A practical explanation of closures and why they
+        matter when building JavaScript applications.
       </p>
-    </section>
+      <a href="#">Read article →</a>
+    </article>
 
-    <section class="posts">
+    <article>
+      <span>BACKEND</span>
+      <h2>How Cookie Authentication Works</h2>
+      <p>
+        Understanding sessions, cookies and authentication
+        in an Express application.
+      </p>
+      <a href="#">Read article →</a>
+    </article>
 
-      <article>
-        <span>JAVASCRIPT</span>
-        <h2>Understanding JavaScript Closures</h2>
-        <p>
-          A practical explanation of closures and why they
-          matter when building JavaScript applications.
-        </p>
-        <a href="#">Read article →</a>
-      </article>
+    <article>
+      <span>PROJECTS</span>
+      <h2>Building My First Production App</h2>
+      <p>
+        Lessons learned while designing and building
+        a real-world full-stack application.
+      </p>
+      <a href="#">Read article →</a>
+    </article>
 
-      <article>
-        <span>BACKEND</span>
-        <h2>How Cookie Authentication Works</h2>
-        <p>
-          Understanding sessions, cookies and authentication
-          in an Express application.
-        </p>
-        <a href="#">Read article →</a>
-      </article>
+  </section>
 
-      <article>
-        <span>PROJECTS</span>
-        <h2>Building My First Production App</h2>
-        <p>
-          Lessons learned while designing and building
-          a real-world full-stack application.
-        </p>
-        <a href="#">Read article →</a>
-      </article>
-
-    </section>
-
-  </main>
+</main>
 
 </body>
 </html>
