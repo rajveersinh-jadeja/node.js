@@ -1,0 +1,29 @@
+<%- include('partials/header', { title: 'Edit Student' }) %>
+
+<div class="page-head">
+    <h1>Edit Student</h1>
+    <a href="/students" class="btn btn-light">Back</a>
+</div>
+
+<div class="form-card">
+    <form action="/students/edit/<%= student._id %>" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="<%= student.name || '' %>" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="<%= student.email || '' %>" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="1" max="120" value="<%= student.age || '' %>">
+
+        <label for="course">Course</label>
+        <input type="text" id="course" name="course" value="<%= student.course || '' %>" placeholder="e.g. BCA">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" value="<%= student.phone || '' %>">
+
+        <button type="submit" class="btn btn-block">Update Student</button>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

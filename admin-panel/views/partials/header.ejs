@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Admin Panel</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <h2>Admin Panel</h2>
+            <div class="nav-links">
+                <a href="/students">Students</a>
+                <% if (user) { %>
+                <span class="nav-user">Hi, <%= user.username %></span>
+                <form action="/logout" method="POST">
+                    <button type="submit" class="btn btn-sm">Logout</button>
+                </form>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <% if (messages.success) { %>
+        <div class="alert alert-success"><%= messages.success %></div>
+        <% } %>

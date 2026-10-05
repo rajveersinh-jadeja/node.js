@@ -1,0 +1,49 @@
+<%- include('partials/header', { title: 'Students' }) %>
+
+<div class="page-head">
+    <h1>Students</h1>
+    <a href="/students/add" class="btn">+ Add Student</a>
+</div>
+
+<% if (students.length > 0) { %>
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach(student => { %>
+            <tr>
+                <td><a href="/students/<%= student._id %>" class="link"><%= student.name %></a></td>
+                <td><%= student.email %></td>
+                <td><%= student.age ? student.age : '—' %></td>
+                <td><%= student.course ? student.course : '—' %></td>
+                <td><%= student.phone ? student.phone : '—' %></td>
+                <td class="actions">
+                    <a href="/students/edit/<%= student._id %>" class="btn btn-sm btn-light">Edit</a>
+                    <form action="/students/delete/<%= student._id %>" method="POST"
+                        onsubmit="return confirm('Delete <%= student.name %>?');">
+                        <button type="submit" class="btn btn-sm delete-btn">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+<p class="count"><%= students.length %> student<%= students.length === 1 ? '' : 's' %></p>
+<% } else { %>
+<div class="empty">
+    <p>No students yet.</p>
+    <a href="/students/add" class="btn">Add your first student</a>
+</div>
+<% } %>
+
+<%- include('partials/footer') %>

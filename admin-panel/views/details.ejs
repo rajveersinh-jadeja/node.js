@@ -1,0 +1,39 @@
+<%- include('partials/header', { title: student.name }) %>
+
+<div class="page-head">
+    <h1><%= student.name %></h1>
+    <div class="page-actions">
+        <a href="/students/edit/<%= student._id %>" class="btn">Edit</a>
+        <a href="/students" class="btn btn-light">Back</a>
+    </div>
+</div>
+
+<div class="detail-card">
+    <div class="detail-row">
+        <span class="label">Name</span>
+        <span class="value"><%= student.name %></span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Email</span>
+        <span class="value"><a href="mailto:<%= student.email %>" class="link"><%= student.email %></a></span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Age</span>
+        <span class="value"><%= student.age ? student.age : '—' %></span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Course</span>
+        <span class="value"><%= student.course ? student.course : '—' %></span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Phone</span>
+        <span class="value"><%= student.phone ? student.phone : '—' %></span>
+    </div>
+</div>
+
+<form action="/students/delete/<%= student._id %>" method="POST"
+    onsubmit="return confirm('Delete <%= student.name %>?');">
+    <button type="submit" class="btn delete-btn">Delete Student</button>
+</form>
+
+<%- include('partials/footer') %>
