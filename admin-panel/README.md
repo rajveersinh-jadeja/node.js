@@ -2,6 +2,9 @@
 
 A simple student management admin panel built with Express, EJS, MongoDB, and Mongoose. It uses Passport.js for admin authentication.
 
+## video explanation
+https://drive.google.com/file/d/1xCvjyFou9O1FD5ZysRACCf5mouemwETy/view?usp=sharing
+
 ## Project Overview
 
 The Student CRUD Admin Panel is a web application for managing student records through a simple, authenticated admin interface. It allows an administrator to create, view, update, and delete student information without interacting directly with the database.
@@ -42,15 +45,6 @@ Install the dependencies:
 npm install
 ```
 
-Create a `.env` file in the project root:
-
-```env
-PORT=3000
-MONGO_URI=mongodb://127.0.0.1:27017/adminDB
-SESSION_SECRET=replace-with-a-long-random-string
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=replace-with-a-strong-password
-```
 
 Ensure MongoDB is running locally on port `27017`. The application uses the `adminDB` database and creates collections when needed.
 
